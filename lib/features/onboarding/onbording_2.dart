@@ -9,6 +9,7 @@ class Onboarding_2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: CustomColor.backgroundWhiteColor,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(15.0),
@@ -78,6 +79,9 @@ class Onboarding_2 extends StatelessWidget {
                 child: Row(
                   children: [
                     GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, RouteNames.signInPage);
+                      },
                       child: const SizedBox(
                         height: double.infinity,
                         width: 208,

@@ -1,4 +1,6 @@
 import 'package:flight_booking_app/core/route/rout_names.dart';
+import 'package:flight_booking_app/features/auth/sign_in_page.dart';
+import 'package:flight_booking_app/features/auth/sign_up_page.dart';
 import 'package:flight_booking_app/features/onboarding/onbording_1.dart';
 import 'package:flight_booking_app/features/onboarding/onbording_2.dart';
 import 'package:flight_booking_app/features/onboarding/onbording_3.dart';
@@ -13,10 +15,14 @@ class AppRoute {
     switch (routeSettings.name) {
       case RouteNames.onboarding_page_1:
         return MaterialPageRoute(builder: (_) => const Onboarding_1());
-        case RouteNames.onboarding_page_2:
+      case RouteNames.onboarding_page_2:
         return MaterialPageRoute(builder: (_) => const Onboarding_2());
-        case RouteNames.onboarding_page_3:
+      case RouteNames.onboarding_page_3:
         return MaterialPageRoute(builder: (_) => const Onboarding_3());
+      case RouteNames.signInPage:
+        return MaterialPageRoute(builder: (_) => const SignInPage());
+        case RouteNames.signUpPage:
+        return MaterialPageRoute(builder: (_) => const SignUpPage());
       default:
         return _errorRoute();
     }
