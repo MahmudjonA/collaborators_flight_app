@@ -1,75 +1,33 @@
-// class AppRoute {
-//   BuildContext context;
-//
-//   AppRoute({required this.context});
-//
-//   Route onGenerateRoute(RouteSettings routeSettings) {
-//     switch (routeSettings.name) {
-//       case RouteNames.signInEmail:
-//         return MaterialPageRoute(builder: (_) => const SignInEmail());
-//       case RouteNames.infoPage:
-//         return MaterialPageRoute(builder: (_) => const InfoPage());
-//       case RouteNames.signInPassword:
-//         return MaterialPageRoute(builder: (_) => const SignInPassword());
-//       case RouteNames.createAccount:
-//         return MaterialPageRoute(builder: (_) => const CreateAccount());
-//       case RouteNames.resetPage:
-//         return MaterialPageRoute(builder: (_) => const ResetPage());
-//       case RouteNames.sendEmailPage:
-//         return MaterialPageRoute(builder: (_) => const SendEmail());
-//       case RouteNames.logInAbout:
-//         return MaterialPageRoute(builder: (_) => const LogInAbout());
-//       case RouteNames.bottomNavBar:
-//         return MaterialPageRoute(builder: (_) => const BottomNavBar());
-//       case RouteNames.shopCategories:
-//         return MaterialPageRoute(builder: (_) => const ShopCategories());
-//       case RouteNames.productsCategories:
-//         String category = routeSettings.arguments as String;
-//         return MaterialPageRoute(
-//             builder: (_) => ProductsCategories(
-//               category: category,
-//             ));
-//       case RouteNames.addressEdit:
-//         return MaterialPageRoute(builder: (_) => const AddressEdit());
-//       case RouteNames.addAddress:
-//         return MaterialPageRoute(builder: (_) => const AddAddress());
-//       case RouteNames.paymentPage:
-//         return MaterialPageRoute(builder: (_) => const PaymentPage());
-//       case RouteNames.addCard:
-//         return MaterialPageRoute(builder: (_) => const AddCardPage());
-//       case RouteNames.wishlist:
-//         return MaterialPageRoute(builder: (_) => const Wishlist());
-//       case RouteNames.orders:
-//         return MaterialPageRoute(builder: (_) => const Orders());
-//       case RouteNames.ordersDetails:
-//         return MaterialPageRoute(builder: (_) => const OrderDetails());
-//       case RouteNames.searchPageMain:
-//         return MaterialPageRoute(builder: (_) => const SearchPageMain());
-//       case RouteNames.ifNotFound:
-//         return MaterialPageRoute(builder: (_) => const IfNotFound());
-//       case RouteNames.ifFound:
-//         return MaterialPageRoute(builder: (_) => const IfFound());
-//       case RouteNames.mainSearchPage:
-//         return MaterialPageRoute(builder: (_) => const MainSearchPage());
-//       case RouteNames.cartMain:
-//         return MaterialPageRoute(builder: (_) => const CartMain());
-//       case RouteNames.cartPage:
-//         return MaterialPageRoute(builder: (_) => const CartPage());
-//       case RouteNames.checkoutPage:
-//         return MaterialPageRoute(builder: (_) => const CheckoutPage());
-//       case RouteNames.messagePage:
-//         return MaterialPageRoute(builder: (_) => const MessagePage());
-//       default:
-//         return _errorRoute();
-//     }
-//   }
-//
-//   Route<dynamic> _errorRoute() {
-//     return MaterialPageRoute(
-//       builder: (_) => Scaffold(
-//         appBar: AppBar(title: const Text('Error')),
-//         body: const Center(child: Text('Page not found')),
-//       ),
-//     );
-//   }
-// }
+import 'package:flight_booking_app/core/route/rout_names.dart';
+import 'package:flight_booking_app/features/onboarding/onbording_1.dart';
+import 'package:flight_booking_app/features/onboarding/onbording_2.dart';
+import 'package:flight_booking_app/features/onboarding/onbording_3.dart';
+import 'package:flutter/material.dart';
+
+class AppRoute {
+  BuildContext context;
+
+  AppRoute({required this.context});
+
+  Route onGenerateRoute(RouteSettings routeSettings) {
+    switch (routeSettings.name) {
+      case RouteNames.onboarding_page_1:
+        return MaterialPageRoute(builder: (_) => const Onboarding_1());
+        case RouteNames.onboarding_page_2:
+        return MaterialPageRoute(builder: (_) => const Onboarding_2());
+        case RouteNames.onboarding_page_3:
+        return MaterialPageRoute(builder: (_) => const Onboarding_3());
+      default:
+        return _errorRoute();
+    }
+  }
+
+  Route<dynamic> _errorRoute() {
+    return MaterialPageRoute(
+      builder: (_) => Scaffold(
+        appBar: AppBar(title: const Text('Error')),
+        body: const Center(child: Text('Page not found')),
+      ),
+    );
+  }
+}
