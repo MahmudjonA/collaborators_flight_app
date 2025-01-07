@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 
 class Onboarding_1 extends StatelessWidget {
   const Onboarding_1({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
