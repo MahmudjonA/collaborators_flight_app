@@ -1,4 +1,5 @@
 import 'package:flight_booking_app/core/constants/color.dart';
+import 'package:flight_booking_app/core/route/rout_names.dart';
 import 'package:flutter/material.dart';
 
 class Onboarding_3 extends StatelessWidget {
@@ -7,6 +8,7 @@ class Onboarding_3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: CustomColor.backgroundWhiteColor,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(15.0),
@@ -77,6 +79,9 @@ class Onboarding_3 extends StatelessWidget {
                 child: Row(
                   children: [
                     GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, RouteNames.signInPage);
+                      },
                       child: const SizedBox(
                         height: double.infinity,
                         width: 208,
@@ -89,7 +94,9 @@ class Onboarding_3 extends StatelessWidget {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushNamed(context, RouteNames.signInPage);
+                      },
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
