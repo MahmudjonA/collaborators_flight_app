@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      initialRoute: RouteNames.onboarding_page_1,
+      initialRoute: RouteNames.transactionDetails,
       onGenerateRoute: AppRoute(context: context).onGenerateRoute,
     );
   }

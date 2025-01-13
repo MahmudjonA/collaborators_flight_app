@@ -6,4 +6,5 @@ class CustomColor {
   static const Color backgroundWhiteColor = Colors.white;
   static const Color whiteTextColor = Colors.white;
   static const Color greyColor = Color(0xFF808080);
+  static const Color lightGrey = Color(0xFFF2F3F6);
 }
