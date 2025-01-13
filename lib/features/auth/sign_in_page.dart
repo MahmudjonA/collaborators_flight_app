@@ -67,7 +67,7 @@ class SignInPage extends StatelessWidget {
                 ),
               ),
               const TextField(
-                obscureText: true, // Parolni yashirish uchun
+                obscureText: true,
                 decoration: InputDecoration(
                   hintText: 'Enter Your Password',
                   hintStyle: TextStyle(

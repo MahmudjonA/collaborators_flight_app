@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'core/route/rout_names.dart';
 import 'core/route/route_generator.dart';
@@ -8,9 +9,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      initialRoute: RouteNames.onboarding_page_1,
+      initialRoute: RouteNames.bottom_nav_bar,
       onGenerateRoute: AppRoute(context: context).onGenerateRoute,
     );
   }
