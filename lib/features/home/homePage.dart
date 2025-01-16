@@ -41,7 +41,6 @@ class _HomepageState extends State<Homepage> {
                       children: [
                         IconButton(
                           onPressed: () {
-                            // Navigator.pop(context); // Handle back navigation
                           },
                           icon: const Icon(
                             Icons.arrow_back_ios_rounded,
@@ -99,7 +98,6 @@ class _HomepageState extends State<Homepage> {
                     children: [
                       Row(
                         children: [
-                          // Radio button for one-way trip
                           Radio<String>(
                             value: "oneway",
                             groupValue: _tripType,
@@ -116,7 +114,6 @@ class _HomepageState extends State<Homepage> {
                           const SizedBox(
                             width: 20,
                           ),
-                          // Radio button for round-trip
                           Radio<String>(
                             value: "roundtrip",
                             groupValue: _tripType,

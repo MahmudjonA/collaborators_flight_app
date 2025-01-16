@@ -1,3 +1,4 @@
+import 'package:flight_booking_app/core/route/rout_names.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/constants/color.dart';
@@ -234,6 +235,7 @@ class _SecuritySettingsState extends State<SecuritySettings> {
               color: CustomColor.spaceColor,
             ),
             GestureDetector(
+              onTap: (){Navigator.pushNamed(context, RouteNames.setPin);},
               child: const Padding(
                 padding: EdgeInsets.all(16.0),
                 child: Column(

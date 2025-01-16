@@ -1,5 +1,6 @@
 import 'package:flight_booking_app/core/arrow_back_black.dart';
 import 'package:flight_booking_app/core/constants/color.dart';
+import 'package:flight_booking_app/core/route/rout_names.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 
@@ -52,7 +53,9 @@ class Passcode extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, RouteNames.paymentSuccessful);
+              },
               child: Container(
                 alignment: Alignment.center,
                 width: double.infinity,

@@ -270,7 +270,7 @@ class _ContactDetailsState extends State<ContactDetails> {
                 ),
               ),
               onPressed: () {
-                // Handle button press
+                Navigator.pop(context);
               },
               child: const Text(
                 "Save Changes",

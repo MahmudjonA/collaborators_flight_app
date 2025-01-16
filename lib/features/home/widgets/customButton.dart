@@ -1,3 +1,4 @@
+import 'package:flight_booking_app/core/route/rout_names.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/constants/color.dart';
@@ -8,6 +9,9 @@ class Custombutton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: (){
+        Navigator.pushNamed(context, RouteNames.flightCardPage);
+      },
       child: Container(
         height: 60,
         width: double.infinity,

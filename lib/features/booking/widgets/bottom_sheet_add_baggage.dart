@@ -15,7 +15,7 @@ class _BottomSheetAddBaggageState extends State<BottomSheetAddBaggage> {
     return SafeArea(
       child: Container(
         width: double.infinity,
-        height: 375,
+        height: 400,
         decoration: const BoxDecoration(
             borderRadius: BorderRadius.only(
               topRight: Radius.circular(24),
@@ -129,6 +129,7 @@ class _BottomSheetAddBaggageState extends State<BottomSheetAddBaggage> {
                   ],
                 ),
               ),
+              SizedBox(height: 10,)
             ],
           ),
         ),

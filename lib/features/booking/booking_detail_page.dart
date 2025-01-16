@@ -1,4 +1,5 @@
 import 'package:flight_booking_app/core/arrow_back.dart';
+import 'package:flight_booking_app/core/route/rout_names.dart';
 import 'package:flight_booking_app/features/booking/widgets/bottom_sheet.dart';
 import 'package:flight_booking_app/features/booking/widgets/toggle_switch.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,9 @@ class BookingDetailPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: CustomColor.whiteTextColor,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: Image.asset("assets/icons/arrow_left_black.png"),
         ),
       ),
@@ -87,7 +90,9 @@ class BookingDetailPage extends StatelessWidget {
                             ],
                           ),
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.pushNamed(context, RouteNames.contactDetails);
+                            },
                             child: const Text(
                               "Edit",
                               style: TextStyle(
@@ -247,7 +252,7 @@ class BookingDetailPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Same As Contact Details",
+                            "Baggage",
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w500,
@@ -424,31 +429,36 @@ class BookingDetailPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Container(
-                    width: 164,
-                    height: 48,
-                    decoration: BoxDecoration(
-                      color: CustomColor.mainColor,
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Select Seat",
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 16,
-                            color: CustomColor.whiteTextColor,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, RouteNames.selectSeat);
+                    },
+                    child: Container(
+                      width: 164,
+                      height: 48,
+                      decoration: BoxDecoration(
+                        color: CustomColor.mainColor,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Select Seat",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16,
+                              color: CustomColor.whiteTextColor,
+                            ),
                           ),
-                        ),
-                        SizedBox(width: 8),
-                        Image(
-                          image: AssetImage(
-                            "assets/icons/check_circle.png",
+                          SizedBox(width: 8),
+                          Image(
+                            image: AssetImage(
+                              "assets/icons/check_circle.png",
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ],

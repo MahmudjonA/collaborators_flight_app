@@ -1,5 +1,6 @@
 import 'package:flight_booking_app/core/arrow_back_black.dart';
 import 'package:flight_booking_app/core/constants/color.dart';
+import 'package:flight_booking_app/core/route/rout_names.dart';
 import 'package:flutter/material.dart';
 
 class PaymentDetails extends StatefulWidget {
@@ -199,31 +200,36 @@ class _PaymentDetailsState extends State<PaymentDetails> {
                     ),
                   ],
                 ),
-                Container(
-                  width: 245,
-                  height: 48,
-                  decoration: BoxDecoration(
-                    color: CustomColor.mainColor,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: const Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Proceed The Payment",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 16,
-                          color: CustomColor.whiteTextColor,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, RouteNames.passcode);
+                  },
+                  child: Container(
+                    width: 245,
+                    height: 48,
+                    decoration: BoxDecoration(
+                      color: CustomColor.mainColor,
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Proceed The Payment",
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16,
+                            color: CustomColor.whiteTextColor,
+                          ),
                         ),
-                      ),
-                      SizedBox(width: 8),
-                      Image(
-                        image: AssetImage(
-                          "assets/icons/check_circle.png",
+                        SizedBox(width: 8),
+                        Image(
+                          image: AssetImage(
+                            "assets/icons/check_circle.png",
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ],

@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       locale: context.locale,
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      initialRoute: RouteNames.bottom_nav_bar,
+      initialRoute: RouteNames.onboarding_page_1,
       onGenerateRoute: AppRoute(context: context).onGenerateRoute,
     );
   }

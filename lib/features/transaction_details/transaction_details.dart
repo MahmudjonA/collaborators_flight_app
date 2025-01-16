@@ -1,5 +1,6 @@
 import 'package:flight_booking_app/core/arrow_back_black.dart';
 import 'package:flight_booking_app/core/constants/color.dart';
+import 'package:flight_booking_app/core/route/rout_names.dart';
 import 'package:flutter/material.dart';
 
 class TransactionDetails extends StatelessWidget {
@@ -283,15 +284,20 @@ class TransactionDetails extends StatelessWidget {
               ),
             ),
             Spacer(),
-            Container(
-              alignment: Alignment.center,
-              width: double.infinity,
-              height: 48,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                color: CustomColor.mainColor,
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, RouteNames.paymentDetails);
+              },
+              child: Container(
+                alignment: Alignment.center,
+                width: double.infinity,
+                height: 48,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: CustomColor.mainColor,
+                ),
+                child: Text("Enter", style: TextStyle(color: CustomColor.whiteTextColor, fontSize: 16, fontWeight: FontWeight.w500),),
               ),
-              child: Text("Enter", style: TextStyle(color: CustomColor.whiteTextColor, fontSize: 16, fontWeight: FontWeight.w500),),
             ),
             SizedBox(height: 20),
           ],

@@ -19,9 +19,9 @@ import 'package:flight_booking_app/features/passenger_info/passenger_info.dart';
 import 'package:flight_booking_app/features/payment_details/payment_details.dart';
 import 'package:flight_booking_app/features/payment_successful/payment_successful.dart';
 import 'package:flight_booking_app/features/search/flight_card_page.dart';
-import 'package:flight_booking_app/features/select_seat/select_seat.dart';
 import 'package:flight_booking_app/features/transaction_details/transaction_details.dart';
 import 'package:flutter/material.dart';
+import '../../features/home/select_seat/select_seat.dart';
 
 class AppRoute {
   BuildContext context;
@@ -65,7 +65,7 @@ class AppRoute {
       case RouteNames.passengerInfo:
         return MaterialPageRoute(builder: (_) => const PassengerInfo());
       case RouteNames.selectSeat:
-        return MaterialPageRoute(builder: (_) => const SelectSeat());
+        return MaterialPageRoute(builder: (_) => const SeatBookingPage());
       case RouteNames.paymentDetails:
         return MaterialPageRoute(builder: (_) => const PaymentDetails());
       case RouteNames.passcode:

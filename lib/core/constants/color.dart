@@ -9,4 +9,5 @@ class CustomColor {
   static const Color lightGreyColor = Color(0xFFE6E8E9);
   static const Color spaceColor = Color(0xFFF2F3F6);
   static const Color lightGrey = Color(0xFFF2F3F6);
+  static const Color unselected = Color(0xFFc2d6f8);
 }

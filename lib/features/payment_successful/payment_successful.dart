@@ -1,4 +1,5 @@
 import 'package:flight_booking_app/core/constants/color.dart';
+import 'package:flight_booking_app/core/route/rout_names.dart';
 import 'package:flutter/material.dart';
 
 class PaymentSuccessful extends StatelessWidget {
@@ -36,18 +37,23 @@ class PaymentSuccessful extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 41),
-            Container(
-              width: double.infinity,
-              height: 48,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  color: CustomColor.whiteTextColor,
-                  borderRadius: BorderRadius.circular(8)),
-              child: const Text(
-                "See Details",
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, RouteNames.bottom_nav_bar);
+              },
+              child: Container(
+                width: double.infinity,
+                height: 48,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                    color: CustomColor.whiteTextColor,
+                    borderRadius: BorderRadius.circular(8)),
+                child: const Text(
+                  "See Details",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ),
             )

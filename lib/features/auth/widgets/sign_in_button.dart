@@ -9,13 +9,13 @@ class SignInButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        Navigator.pushNamed(context, RouteNames.signUpPage);
+        Navigator.pushNamed(context, RouteNames.bottom_nav_bar);
       },
       style: ElevatedButton.styleFrom(
         elevation: 0,
         backgroundColor: CustomColor.mainColor,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8), // Yumaloq burchaklar
+          borderRadius: BorderRadius.circular(8),
         ),
         minimumSize: const Size(double.infinity, 48),
       ),
